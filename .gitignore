@@ -1,0 +1,4 @@
+node_modules/
+.vscode-test/
+*.vsix
+gen_icon.ps1

@@ -1,0 +1,67 @@
+{
+  "name": "autocad-autolisp-debug-assistant",
+  "displayName": "AutoCAD AutoLISP Debug Assistant",
+  "description": "AutoCAD AutoLISP 二次开发助手 — 语法检查、自动化调试、智能诊断、一键交付",
+  "version": "1.0.0",
+  "author": "CAD二次开发团队",
+  "publisher": "CADQuantityCalculationToolbox",
+  "license": "MIT",
+  "keywords": [
+    "autocad",
+    "autolisp",
+    "debug",
+    "lint",
+    "cad",
+    "二次开发",
+    "lisp",
+    "autodesk"
+  ],
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.57.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Debuggers",
+    "Linters"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "activationEvents": [
+    "onCommand:debugEval.evaluate",
+    "onCommand:debugEval.getState",
+    "onCommand:debugEval.execCommand",
+    "onCommand:debugEval.getOutput",
+    "onCommand:debugEval.loadFile",
+    "onCommand:debugEval.getDiagnostics",
+    "onCommand:debugEval.clearOutput",
+    "onCommand:debugEval.openFile",
+    "onCommand:debugEval.lisp",
+    "onCommand:debugEval.lintFile",
+    "onCommand:debugEval.selfCheck",
+    "onCommand:debugEval.autoAttach"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "debugEval.autoAttach", "title": "AADA: 自动附着 CAD" },
+      { "command": "debugEval.openFile", "title": "AADA: 打开文件" },
+      { "command": "debugEval.lintFile", "title": "AADA: 语法检查" },
+      { "command": "debugEval.selfCheck", "title": "AADA: 一键自检" },
+      { "command": "debugEval.evaluate", "title": "AADA: 执行表达式" },
+      { "command": "debugEval.lisp", "title": "AADA: 发送 LISP" },
+      { "command": "debugEval.loadFile", "title": "AADA: 加载文件到CAD" },
+      { "command": "debugEval.execCommand", "title": "AADA: 执行命令" },
+      { "command": "debugEval.getState", "title": "AADA: 获取状态" },
+      { "command": "debugEval.getOutput", "title": "AADA: 调试日志" },
+      { "command": "debugEval.clearOutput", "title": "AADA: 清空日志" },
+      { "command": "debugEval.getDiagnostics", "title": "AADA: 诊断信息" }
+    ]
+  }
+}
