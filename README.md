@@ -285,7 +285,7 @@
 
 ## 📦 安装
 
-### 从 VS Code Marketplace（待发布）
+### 从 VS Code Marketplace（已发布）
 
 ```bash
 code --install-extension autocad-autolisp-debug-assistant
