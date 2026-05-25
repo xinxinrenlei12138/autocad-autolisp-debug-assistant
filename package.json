@@ -2,7 +2,7 @@
   "name": "autocad-autolisp-debug-assistant",
   "displayName": "AutoCAD AutoLISP Debug Assistant",
   "description": "AutoCAD AutoLISP 二次开发助手 — 语法检查、自动化调试、智能诊断、一键交付",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "CAD二次开发团队",
   "publisher": "CADQuantityCalculationToolbox",
   "license": "MIT",

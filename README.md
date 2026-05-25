@@ -339,9 +339,10 @@ code --install-extension autocad-autolisp-debug-assistant-1.0.0.vsix
 - [x] 自动附着 CAD 调试器
 - [x] 一键自检流水线
 - [x] DAP evaluate 执行代码
-- [ ] 9 条语义检查规则移植（if/setq/cond/foreach 等）
-- [ ] 返回值捕获增强
-- [ ] 保存时自动检查
+- [x] 函数签名校验（200+ 函数参数检查）
+- [x] DAP 输出捕获（返回值 + 错误信息）
+- [x] if/cond 缺少 progn 检测
+- [x] C:命令函数规范检查
 - [ ] 问题面板集成（Problem Matcher）
 - [ ] 多语言界面（中/英）
 - [ ] 测试覆盖率报告
@@ -359,7 +360,29 @@ code --install-extension autocad-autolisp-debug-assistant-1.0.0.vsix
 
 ---
 
-## 📄 许可证
+## � 更新日志
+
+### v1.1.0 (2026-05-25)
+- ✨ **函数签名校验引擎** — 新增 `checkSignatures`，支持 200+ AutoLISP 函数的参数数量校验
+- ✨ **参数计数** — 新增 `countArgs`，精确统计 S-表达式参数个数
+- ✨ **if/cond 缺少 progn 检测** — 新增 `checkIfCondProgn`，检测多表达式分支缺少 `progn`
+- ✨ **C:命令函数规范检查** — 新增 `checkCPrefix`，检测命令函数缺少 `(princ)` 静默退出
+- ✨ **重构栈回溯引擎** — `deepCheck` 拆分为 `deepCheckStructured` + 报告格式化
+- ✨ **扩展函数签名库** — 新增 vla-/vlax-/vlr- 等 ActiveX 函数签名
+- ⚡ **DAP 输出捕获** — 通过 `DebugAdapterTracker` 捕获返回值与错误信息
+- 📦 **发布到 VS Code Marketplace**
+- 🐙 **开源到 GitHub**
+
+### v1.0.0 (2026-05-24)
+- 🚀 首次发布：内置 linter（括号平衡/defun完整性/lambda空格/重复定义）
+- 🚀 自动附着 CAD（setDefaultAcadPid 跳过 PID 选择器）
+- 🤖 一键自检流水线（lint → attach → load → 报告）
+- ⚡ DAP evaluate 执行 AutoLISP 代码
+- 📡 COM 桥接发送命令到 AutoCAD
+
+---
+
+## �📄 许可证
 
 MIT License © 2026
 
